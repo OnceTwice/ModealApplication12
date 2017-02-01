@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorModeal</item> <!-- 170123/상욱수정 -->
+        <item name="colorPrimaryDark">#000000</item> <!-- 170123/상욱수정 -->
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!-- 170123/상욱추가 -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- 네비게이션 액티비티 만들때 자동으로 생긴것으로 별도로 프로젝트 제작시 추가해주세요 -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
