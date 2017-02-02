@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.ff.modealapplication.R;
-import com.ff.modealapplication.app.ui.join.JoinFragment;
+import com.ff.modealapplication.app.ui.join.JoinActivity;
 import com.ff.modealapplication.app.ui.login.LoginActivity;
 import com.ff.modealapplication.app.ui.mypage.MypageFragment;
 import com.ff.modealapplication.app.ui.search.SearchActivity;
@@ -77,25 +77,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onClick(View view) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         switch (view.getId()) {
             case R.id.login_button: {
                 Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
-                drawer.closeDrawer(GravityCompat.START);
+//                drawer.closeDrawer(GravityCompat.START);
                 break;
             }
             case R.id.register_button: {
+                Intent intent1 = new Intent(this, JoinActivity.class);
+                startActivity(intent1);
 //                transaction.remove(mainFragment);
 //                joinFragment = new JoinFragment();
-                transaction.add(R.id.activity_content, new JoinFragment());
+//                transaction.add(R.id.activity_content, new JoinFragment());
                 break;
             }
         }
 
-        transaction.addToBackStack(null);
-        transaction.commit();
+//        transaction.addToBackStack(null);
+//        transaction.commit();
 
         drawer.closeDrawer(GravityCompat.START);
     }

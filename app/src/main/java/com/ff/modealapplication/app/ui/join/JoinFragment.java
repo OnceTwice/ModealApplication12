@@ -87,6 +87,7 @@ public class JoinFragment extends Fragment {
 
     @Override
     public void onDestroyView() {       // View 리소스를 해제할 수 있도록 호출, backstack를 사용했다면 Fragment를 다시 돌아갈 때 onCreateView()가 호출됨
+        getActivity().finish();
         Log.d("J===LifeCycle", "onDestroyView called!!!!!");
         super.onDestroyView();
     }
